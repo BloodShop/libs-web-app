@@ -16,11 +16,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 const mongoose = require('mongoose');
-mongoose.set('strictQuery', true);
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
-const db = mongoose.connection;
+mongoose.set('strictQuery', false);
+mongoose.connect(process.env.DATABASE_URL/* , { useNewUrlParser: true } */)
+    .then(console.log("Connected to Database"))
+    .catch(error => console.error(error));
+/*  const db = mongoose.connection;
 db.on('error', error => console.error(error));
-db.once('open', () => console.log('Connected to mongoose'));
+db.once('open', () => console.log('Connected to mongoose')); */
 
 app.use('/', indexRouter);
 
