@@ -13,8 +13,10 @@ app.set('views', `${__dirname}/views`);
 app.set('layout', 'layouts/layout');
 app.use(expressLayouts);
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', error => console.error(error));
