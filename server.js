@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
 
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.DATABASE_URL/* , { useNewUrlParser: true } */)
+mongoose.connect(process.env.DATABASE_URL || process.env.ATLAS_URL, { useNewUrlParser: true })
     .then(console.log("Connected to Database"))
     .catch(error => console.error(error));
 /*  const db = mongoose.connection;
