@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const express = require('express');
+let MongoClient = require('mongodb').MongoClient;
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser')
@@ -31,4 +32,6 @@ app.use('/', indexRouter);
 app.use('/authors', authorRouter);
 app.use('/books', bookRouter);
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, function() {
+    console.log(`app listening on port ${process.env.PORT || 3000}`);
+});
