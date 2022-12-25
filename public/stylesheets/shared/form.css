@@ -45,7 +45,7 @@
     color: var(--color-text-light);
     font-size: 1rem;
     font-weight: normal;
-    font-family: 'Raleway';
+    font-family: 'Chivo Mono';
     outline: none;
   }
 
@@ -63,7 +63,7 @@
   }
 
   .filepond--root {
-    font-family: 'Raleway';
+    font-family: 'Chivo Mono';
     margin-bottom: 0;
   }
 

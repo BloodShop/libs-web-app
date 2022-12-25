@@ -13,3 +13,16 @@ router.get('/', async (req, res) => {
 })
 
 module.exports = router
+
+/* const navigateTo = url => {
+  history.pushState(null, null, url);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("click", e => {
+    if (e.target.matches("[data-link]")) {
+      e.preventDefault();
+      navigateTo(e.target.href);
+    }
+  })
+}); */

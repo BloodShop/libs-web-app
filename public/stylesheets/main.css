@@ -3,9 +3,11 @@
 @import 'shared/header.css';
 @import 'shared/buttons.css';
 @import 'shared/form.css';
+@import 'shared/books.css';
+@import 'shared/author.css';
 
 :root {
-    font-family: 'Raleway';
+    font-family: 'Chivo Mono';
     font-size: 20px;
     color: var(--color-text-light);
   }
@@ -33,7 +35,11 @@
     font-weight: 500;
 }
 
-/* .circles{
+.error-message {
+    color: hsl(var(--color-danger-hue), 100%, 50%);
+}
+
+.circles{
     position: fixed;
     top: 0;
     left: 0;
@@ -127,4 +133,4 @@
     height: 150px;
     animation-delay: 0s;
     animation-duration: 11s;
-} */
+}
